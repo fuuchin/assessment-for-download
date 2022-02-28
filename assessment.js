@@ -4,18 +4,17 @@ const userNameInput = id('user-name');
 const assessmentButton = id('assessment');
 const resultDivided = id('result-area');
 const tweetDivided = id('tweet-area');
+const resultHeader = id('result-header');
+const resultParagraph = id('result-paragraph');
+const wkwk = id('wkwk');
+const other = id('other-paragraph');
+const scratch = id('scratch');
 
 assessmentButton.onclick = () => {
   const userName = userNameInput.value;
   if (userName.length === 0) {
     // 名前が空の時は処理を終了する
     return;
-  }
-
-  // 診断結果表示エリアの作成
-  while (resultDivided.firstChild) {
-    // 子どもの要素があるかぎり削除
-    resultDivided.removeChild(resultDivided.firstChild);
   }
 
   const omikujiResults = ['大吉', '大吉', '吉', '中吉', '末吉', '末吉', '末吉', '小吉', '凶',  '凶', '凶', '凶', '大凶', '大凶'];
@@ -33,18 +32,17 @@ assessmentButton.onclick = () => {
   const index = sumOfCharCode % kaomoji.length;
   const userKaomoji = kaomoji[index];
 
-  const header = document.createElement('h3');
-  header.innerHTML = '診断結果';
-  resultDivided.appendChild(header);
-  header.className = ('header-style');
-
-  const paragraph = document.createElement('p');
   let result = assessment(userName);
-  paragraph.innerHTML = result + `<h3>ついでに</h3>
-                                  <p>あなたの顔文字は...&nbsp;&nbsp;&nbsp;「<span class="omikuji-result">${userKaomoji}</span>」</p>
-                                  <p>おみくじの結果は...&nbsp;&nbsp;&nbsp;「<span class="omikuji-result">${omokujiResult}</span>」</p>`;
-  resultDivided.appendChild(paragraph);
-  paragraph.className = ('paragraph-style');
+
+  resultHeader.style.display = "block";
+  wkwk.style.display = "none";
+  resultParagraph.style.display = "block";
+  resultParagraph.innerHTML = result;
+  other.style.display = "block";
+  other.innerHTML = `<h3>ついでに</h3>
+                    <p>あなたの顔文字は...&nbsp;&nbsp;&nbsp;「<span class="omikuji-result">${userKaomoji}</span>」</p>
+                    <p>おみくじの結果は...&nbsp;&nbsp;&nbsp;「<span class="omikuji-result">${omokujiResult}</span>」</p>`;
+  scratch.style.display = "block";
 
   // ツイートエリアの作成
   tweetDivided.innerText = "";

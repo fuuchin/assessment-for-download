@@ -18,12 +18,23 @@
     <input type="text" id="user-name" size="40" maxlength="25" placeholder="診断したい名前を入力してください。">
     <button id="assessment">診断する</button>
     <div id="result-style">
-      <div id="result-area">何が出るかな？<br>wkwk</div>
+      <div id="result-area">
+        <div id="wkwk" style="display: block;">何が出るかな？<br>wkwk</div>
+        <h3 id="result-header" class="header-style" style="display: none;">診断結果</h3>
+        <!-- あなたのいいところはーーーです。あなたのーーーが～～～～～です。 -->
+        <p id="result-paragraph" class="paragraph-style" style="display: none;"></p>
+        <!-- おみくじなど -->
+        <p id="other-paragraph" class="other" style="display: none;"></p>
+      </div>
       <div id="tweet-area"></div>
     </div>
-    <p>こちらもどうぞ</p>
-    <p>「JavaScriptでコーティング」なので、こちらは点数には入れない感じかな？</p>
-    <iframe id="scratch" src="https://scratch.mit.edu/projects/632524404/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <!-- Scratch -->
+    <div id="scratch" style="display: none;">
+      <p>こちらもどうぞ</p>
+      <p>「JavaScriptでコーティング」なので、こちらは点数には入れない感じかな？</p>
+      <p>※音が鳴ります。</p>
+      <iframe id="scratch-game" src="https://scratch.mit.edu/projects/632524404/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    </div>
     <script src="assessment.js"></script>
   </body>
 </html>

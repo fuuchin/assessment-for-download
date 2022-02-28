@@ -100,11 +100,21 @@ strong {
   padding: 2px;
 }
 
-.omikuji-result {
-  font-weight: 900;
-  color: #ee860f;
+.other {
+  margin: 10px;
+  background: #7096e9;
+  font-size: 20px;
+  color: #dfef01;
+  border: 2px dashed #5c86df;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-#scratch  {
+.omikuji-result {
+  font-weight: 900;
+  color: #eec50f;
+}
+
+#scratch-game  {
   border-radius: 10px;
 }
