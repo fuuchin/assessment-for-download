@@ -9,12 +9,13 @@ body {
 }
 
 button {
+  margin-left: 10px;
   padding-bottom: 3px;
   border-radius: 2px;
   font-size: 20px;
   background: #ee500f;
   color: #fdffff;
-  border: 2px solid #000;
+  border: none;
   border-radius: 5px;
   width: 140px;
   height: 46px;
@@ -29,7 +30,7 @@ button:hover {
 }
 
 button:active {
-  /*ボタンにフォーカスしたときに*/
+  /*ボタンが押されている間*/
   box-shadow: none;
   transform: translate(1px, 2px);
 }
@@ -37,7 +38,7 @@ button:active {
 input {
   width: 50%;
   height: 2.5rem;
-  border: 1px solid #3151cf;
+  border: none;
   border-radius: 5px;
   min-height: 1rem;
   font-size: 1.2rem;
@@ -48,22 +49,20 @@ input {
 
 input:focus {
   /*入力欄にフォーカスしたときに*/
-  border: 2px solid #0141ef;
+  border: none;
   outline: 0;
+}
+
+input:active {
   /* 影を消す */
   box-shadow: none;
   transform: translate(1px, 2px);
 }
 
 input::placeholder{
+  padding-left: 7px;
   transition: 300ms;
   color: #aab;
-}
-
-input:focus::placeholder{
-  /*入力欄にフォーカスしたときにplaceholderが右にアニメーションします。 */
-  transform: translateX(40px);
-   opacity: 0;
 }
 
 .header-style {
@@ -115,6 +114,26 @@ strong {
   color: #eec50f;
 }
 
-#scratch-game  {
+#scratch-link {
+  padding: 10px 15px;
+  width: 10px;
+  border: none;
   border-radius: 10px;
+  text-decoration: none;
+  background: #e52b2c;
+  color: #fff;
+  /* 影 */
+  box-shadow: 3px 3px 2px #28193d;
+  transition: 300ms;
+}
+
+#scratch-link:hover {
+  /* マウスを上に載せたら */
+  background: #f55353;
+}
+
+#scratch-link:active {
+  /* 影を消す */
+  box-shadow: none;
+  transform: translate(1px, 2px);
 }
