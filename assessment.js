@@ -54,7 +54,7 @@ assessmentButton.onclick = () => {
   anchor.setAttribute('href', hrefValue);
   anchor.className = 'twitter-hashtag-button';
 
-  // answersの中にあるツイート時には余分なHTMLタグを消去
+  // answersの中にあるツイート時には余分なHTMLタグなどを消去
   result = result.replaceAll('<br>', '');
   result = result.replaceAll('<strong>', '');
   result = result.replaceAll('</strong>さん', '');
