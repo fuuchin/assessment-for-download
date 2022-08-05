@@ -75,6 +75,7 @@ assessmentButton.onclick = () => {
   result = result.replace('<img src="img/arinomama.png"class="anspng">', '');
   result = result.replace('<img src="img/jiseishin.png"class="anspng">', '');
   result = result.replace('<img src="img/yasashii.png"class="anspng">', '');
+  result = result.replace('<img src="img/doryoku.png"class="anspng">, '');
 
   anchor.setAttribute('data-text', result);
   anchor.innerText = 'Tweet #あなたのいいところ';
@@ -110,7 +111,8 @@ const answers = [
   '<strong>{userName}</strong>さんのいいところは気配りです。<br><strong>{userName}</strong>さんの配慮が多くの人を救っています。<br><img src="img/kikubari.png"class="anspng">',
   '<strong>{userName}</strong>さんのいいところはその全てです。<br>ありのままの<strong>{userName}</strong>さん自身がいいところなのです。<br><img src="img/arinomama.png"class="anspng">',
   '<strong>{userName}</strong>さんのいいところは自制心です。<br>やばいと思ったときにしっかりと衝動を抑えられる<strong>{userName}</strong>さんが皆から評価されています。<br><img src="img/jiseishin.png"class="anspng">',
-  '<strong>{userName}</strong>さんのいいところは優しさです。<br><strong>{userName}</strong>さんの優しい雰囲気や立ち振る舞いに多くの人が癒やされています。<br><img src="img/yasashii.png"class="anspng">'
+  '<strong>{userName}</strong>さんのいいところは優しさです。<br><strong>{userName}</strong>さんの優しい雰囲気や立ち振る舞いに多くの人が癒やされています。<br><img src="img/yasashii.png"class="anspng">',
+  '{userName}さんのいいところは努力できることです。{userName}さんの一生懸命努力する姿を皆が見習おうとしています。<img src="img/doryoku.png"class="anspng">'
 ];
 
 /**
